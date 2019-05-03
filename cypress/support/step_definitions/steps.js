@@ -1,4 +1,4 @@
-var faker = require('faker')
+import { name, internet, phone } from 'faker';
 
 Given('I open the appointments booking journey', () => {
   cy.visit('https://customer.bookingbug.com/?client=automation-appointments&environment=staging')
@@ -70,8 +70,8 @@ Then('the appointment booking is complete', () => {
 })
 
 var person = {
-  firstName: faker.name.firstName(),
-  lastName : faker.name.lastName(),
-  email    : faker.internet.email(),
-  mobile   : "7777777777"
+  firstName: name.firstName(),
+  lastName : name.lastName(),
+  email    : internet.email(),
+  mobile   : phone.phoneNumber('77########')
 }
