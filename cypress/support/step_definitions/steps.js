@@ -1,7 +1,7 @@
 import { name, internet, phone } from 'faker';
 
 Given('I open the appointments booking journey', () => {
-  cy.visit('https://customer.bookingbug.com/?client=automation-appointments&environment=staging')
+  cy.visit('?client=automation-appointments&environment=staging')
   cy.get('h1')
     .should('contain', 'Pick a service')
 })
