@@ -73,5 +73,5 @@ var person = {
   firstName: faker.name.firstName(),
   lastName : faker.name.lastName(),
   email    : faker.internet.email(),
-  mobile   : "777777777"
+  mobile   : "7777777777"
 }
