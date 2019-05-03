@@ -1,7 +1,7 @@
 import { name, internet, phone } from 'faker';
 
 Given('I open the appointments booking journey', () => {
-  cy.visit('?client=automation-appointments&environment=staging')
+  cy.visit(`${Cypress.env('customerUrl')}?client=automation-appointments&environment=staging`)
   cy.get('h1')
     .should('contain', 'Pick a service')
 })
@@ -75,3 +75,53 @@ var person = {
   email    : internet.email(),
   mobile   : phone.phoneNumber('77########')
 }
+
+Given('I am logged in to studio', () => {
+  cy.visit(`${Cypress.env('staffUrl')}/#/login`)
+
+  cy.get('#site')
+    .clear()
+    .type(`${Cypress.env('environment')}`)
+
+  cy.get('#username')
+    .clear()
+    .type(`${Cypress.env('loginUsername')}`)
+
+  cy.get('#password')
+    .clear()
+    .type(`${Cypress.env('loginPassword')}`)
+
+  cy.get('.panel-footer > .btn')
+    .click()
+
+})
+Given('I am on the calendar page of studio', () => {
+
+})
+When('I click the "New Booking" button', () => {
+
+})
+When('the booking modal is open', () => {
+
+})
+When('I click the "Continue" button', () => {
+
+})
+When('the date and time page is open', () => {
+
+})
+When('I select an available timeslot and click Continue', () => {
+
+})
+When('the select attendees page is open', () => {
+
+})
+When('I input new customer details and click Continue', () => {
+
+})
+Then('the booking is confirmed', () => {
+
+})
+Then('I can see the booking in classic', () => {
+
+})

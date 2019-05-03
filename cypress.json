@@ -1,3 +1,9 @@
 {
-  "baseUrl" : "https://customer.bookingbug.com/"    
+  "env" : {
+    "customerUrl" : "https://customer.bookingbug.com/",
+    "staffUrl" : "https://studio.bookingbug.com/development",
+    "environment" : "https://pacman.bookingbug.com",
+    "loginUsername" : "qa+bookings@bookingbug.com",
+    "loginPassword" : "bn56tygh"
+  }
 }
